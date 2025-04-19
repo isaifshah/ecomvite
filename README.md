@@ -44,7 +44,7 @@
 1.  **Clone the Repository:**
     ```bash
     git clone https://github.com/isaifshah/ecomvite.git
-    cd shoppy-globe
+    cd shoppy-globe-vite
     ```
 
 2.  **Install Dependencies:**
