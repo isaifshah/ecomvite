@@ -1,0 +1,580 @@
+/* index.css */
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; /* Added a default font */
+  line-height: 1.6; /* Improved readability */
+  background-color: #f4f4f4; /* Light background */
+  color: #333; /* Darker text for better contrast */
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin: 0;
+  padding: 1rem 0; /* Reduced vertical padding */
+  width: 100%;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem; /* Reduced horizontal padding on larger screens */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Slightly increased gap */
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+.logo-icon {
+  font-size: 2rem; /* Slightly increased icon size */
+}
+
+.logo-text {
+  font-size: 1.75rem; /* Slightly increased text size */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem; /* Adjusted gap */
+  align-items: center;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.75rem 1.25rem; /* Adjusted padding */
+  border-radius: 6px; /* Slightly more rounded */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.15); /* Slightly darker hover */
+  color: white;
+}
+
+.cart-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Adjusted gap */
+  background: #e67e22;
+  padding: 0.75rem 1.75rem; /* Adjusted padding */
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s, background 0.2s ease;
+}
+
+.cart-link:hover {
+  transform: scale(1.08); /* Slightly more pronounced hover */
+  background: #d35400;
+}
+
+.cart-counter {
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 28px; /* Slightly larger counter */
+  height: 28px; /* Slightly larger counter */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem; /* Adjusted font size */
+  position: absolute;
+  top: -10px; /* Adjusted position */
+  right: -10px; /* Adjusted position */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-around; /* More even spacing */
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+
+  .cart-link {
+    padding: 0.75rem 1.25rem;
+    border-radius: 20px;
+  }
+}
+
+/* Small mobile devices (up to 576px) */
+@media (max-width: 576px) {
+  .logo-icon {
+    font-size: 1.75rem;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .cart-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Wrapper around search */
+.search-container {
+  width: 90%; /* Adjusted width for mobile */
+  max-width: 600px; /* Increased max width */
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  border: 2px solid #007BFF;
+  border-radius: 25px;
+  padding: 10px 16px; /* Adjusted padding */
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Slightly softer shadow */
+}
+
+/* Search icon */
+.search-icon {
+  font-size: 20px; /* Adjusted icon size */
+  color: #007BFF;
+  margin-right: 10px; /* Adjusted margin */
+}
+
+/* Input field */
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1.1rem; /* Adjusted font size */
+  padding: 10px 0; /* Adjusted padding */
+}
+
+/* Container for product cards */
+.product-grid {
+  display: grid; /* Using grid for better control on different screen sizes */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible grid */
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto; /* Center the grid */
+  max-width: 1200px; /* Match nav container */
+}
+
+/* Style for the product cards */
+.product-grid .product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px; /* Slightly more rounded */
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  transition: transform 0.3s ease;
+}
+
+.product-grid .product-card:hover {
+  transform: translateY(-8px); /* More pronounced hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* More pronounced hover shadow */
+}
+
+.product-grid .product-card a { /* Style the link wrapping image and text */
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
+  display: block; /* Make the entire link clickable */
+}
+
+.product-grid .product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 16px; /* Increased margin */
+  border-radius: 8px; /* Rounded images */
+}
+
+/* Style for the product name */
+.product-grid .product-card h3 {
+  font-size: 1.2rem; /* Adjusted font size */
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px; /* Adjusted margin */
+  margin-bottom: 8px; /* Adjusted margin */
+  letter-spacing: 0.4px;
+}
+
+/* Style for the product price */
+.product-grid .product-card p {
+  font-size: 1.15rem; /* Adjusted font size */
+  color: #dc3545; /* Red price */
+  font-weight: 600;
+  margin-bottom: 12px; /* Added margin */
+}
+
+/* Style for the "Add to Cart" button */
+.product-grid .product-card .add-to-cart {
+  background-color: #28a745; /* Green background */
+  color: white;
+  padding: 12px 20px; /* Adjusted padding */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem; /* Adjusted font size */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 12px; /* Adjusted margin */
+  width: 100%; /* Make the button take full width of the card */
+  font-weight: 500; /* Slightly bolder text */
+}
+
+.product-grid .product-card .add-to-cart:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05);
+}
+
+.product-grid .product-card .add-to-cart:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+/* Styling for the Cart Page */
+.cart-page {
+  padding: 30px; /* Increased padding */
+  max-width: 960px;
+  margin: 30px auto; /* Increased margin */
+  background-color: #fff;
+  border-radius: 12px; /* More rounded */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Softer shadow */
+}
+
+.cart-page h2 {
+  text-align: center;
+  margin-bottom: 25px; /* Increased margin */
+  color: #333;
+  font-size: 2rem; /* Larger heading */
+}
+
+.cart-page p {
+  text-align: center;
+  color: #777;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Styling for individual Cart Items */
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0; /* Increased padding */
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item img {
+  width: 150px; /* Increased image size */
+  height: 120px; /* Increased image size */
+  object-fit: contain;
+  margin-right: 20px; /* Increased margin */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cart-item > div { /* Targeting the div containing title, price, quantity, remove */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space vertically */
+  min-height: 120px; /* Match image height */
+}
+
+.cart-item h4 {
+  font-size: 1.2rem; /* Adjusted font size */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.cart-item p { /* Style for price x quantity */
+  color: #555;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.cart-item input[type="number"] {
+  width: 70px; /* Adjusted width */
+  padding: 10px; /* Adjusted padding */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.cart-item button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 15px; /* Adjusted padding */
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: flex-start; /* Align button to the start of its container */
+}
+
+.cart-item button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+.cart-item button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.5);
+}
+
+/* Styling for the Cart Total */
+.cart-total {
+  text-align: right;
+  margin-top: 30px; /* Increased margin */
+  padding-top: 20px; /* Increased padding */
+  border-top: 1px solid #eee;
+  font-size: 1.4rem; /* Larger font size */
+  font-weight: bold;
+  color: #333;
+}
+
+/* Styling for the Loading state */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Styling for the Error state */
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  font-size: 1.1rem;
+  color: #dc3545;
+  text-align: center;
+  padding: 20px;
+}
+
+.error button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.error button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the Not Found Page (assuming you add a class) */
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.not-found-page h1 {
+  font-size: 3em;
+  color: #dc3545;
+  margin-bottom: 20px;
+}
+
+.not-found-page p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.not-found-page a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.not-found-page a:hover {
+  color: #0056b3;
+}
+
+/* Media Query for larger desktops */
+@media (min-width: 1200px) {
+  .nav-container {
+    padding: 0 3rem;
+  }
+
+  .product-grid {
+    padding: 30px;
+  }
+}
+
+.cart-page .checkout-button {
+  background-color: #007bff; /* Blue checkout button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.cart-page .checkout-button:hover {
+  background-color: #0056b3;
+}
+
+.cart-page .checkout-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+/* Styling for the Product Detail Page */
+.product-detail {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically by default */
+  align-items: center; /* Center content horizontally */
+  padding: 30px;
+  max-width: 960px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align text within the container to the left */
+}
+
+/* Style for the image container */
+.product-detail-image-container {
+  max-width: 400px; /* Adjust as needed */
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden; /* To contain the image within the border-radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.product-detail img {
+  display: block; /* Remove extra space below image */
+  width: 100%;
+  height: auto;
+}
+
+.product-detail h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center; /* Center the title */
+}
+
+.product-detail p {
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.product-detail .price {
+  font-size: 1.8em;
+  color: #dc3545; /* Make the price stand out */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-detail .rating {
+  color: #ffc107; /* Use a color associated with ratings (e.g., gold) */
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.product-detail .rating::before {
+  content: '★ '; /* Add a star icon before the rating */
+}
+
+/* Style for the "Add to Cart" button (ensure this is present in your ProductDetail.jsx) */
+.product-detail .add-to-cart {
+  background-color: #28a745; /* Green button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.product-detail .add-to-cart:hover {
+  background-color: #218838;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .product-detail {
+    padding: 20px;
+    text-align: center; /* Center align on smaller screens */
+  }
+
+  .product-detail-image-container {
+    max-width: 80%;
+    margin-bottom: 15px;
+  }
+
+  .product-detail h1 {
+    font-size: 2em;
+  }
+}
