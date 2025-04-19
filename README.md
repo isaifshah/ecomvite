@@ -118,3 +118,18 @@ Our visual presentation is crafted with standard `CSS`, with responsiveness in m
 * Add user authentication and order history.
 * Write comprehensive tests.
 * Consider server-side rendering for SEO and performance gains.
+
+## 🏞️ Screenshots 🏞️
+
+![image](https://github.com/user-attachments/assets/e4a1e608-d1c6-44c6-bfc7-dcf63c161d39)
+![image](https://github.com/user-attachments/assets/286cf3c4-cc3b-44aa-85ec-41c4cef0ccfe)
+![image](https://github.com/user-attachments/assets/c36ca454-f7f3-460c-adf5-a9211c91dbdf)
+![image](https://github.com/user-attachments/assets/1768435b-1564-4884-9f84-f984005e4cb8)
+![image](https://github.com/user-attachments/assets/01a1c7f6-b2c3-40e1-bd75-e84631e8a4a8)
+![image](https://github.com/user-attachments/assets/ef28f7ba-6151-4f0d-8bc8-fa5797e657c2)
+
+
+
+
+
+
