@@ -44,7 +44,7 @@
 1.  **Clone the Repository:**
     ```bash
     git clone https://github.com/isaifshah/ecomvite.git
-    cd shoppy-globe-vite
+    cd ecomvite
     ```
 
 2.  **Install Dependencies:**
@@ -56,7 +56,7 @@
 
 1.  **Fire up the development server:**
     ```bash
-    npm start  # or yarn start
+    npm run dev
     ```
 
 2.  **Open in your browser:** Head to `http://localhost:3000` (or the port in your terminal).
@@ -89,17 +89,6 @@ Redux orchestrates our cart's state:
 * `redux/store.js`: The central hub where our application's state lives.
 * `useSelector`, `useDispatch`: The React Redux tools we use to interact with the store in our components.
 
-## 🚦 Navigation (React Router) 🚦
-
-React Router guides us through the app:
-
-* `/`: The welcoming homepage (product listings).
-* `/products`: Another gateway to the product listings.
-* `/product/:id`: Your portal to individual product details.
-* `/cart`: Your shopping cart in all its glory.
-* `/checkout`: The first step towards completing your purchase.
-* `*`: The route for when the path less traveled leads to a 404.
-
 ## 🚀 Performance Enhancements 🚀
 
 * **Lazy Loading:** We only load components when they're needed, making initial load times snappier.
@@ -107,17 +96,7 @@ React Router guides us through the app:
 
 ## 🎨 Styling 🎨
 
-Our visual presentation is crafted with standard `CSS`, with responsiveness in mind to ensure a consistent experience across devices.
-
-## ⏭️ Future Explorations ⏭️
-
-* Refine the visual design and user interface.
-* Implement advanced cart features (discounts, more detailed summaries).
-* Develop the checkout process further with forms and validation.
-* Integrate local storage for persistent cart data.
-* Add user authentication and order history.
-* Write comprehensive tests.
-* Consider server-side rendering for SEO and performance gains.
+The visual presentation is crafted with standard `CSS`, with responsiveness in mind to ensure a consistent experience across devices.
 
 ## 🏞️ Screenshots 🏞️
 
